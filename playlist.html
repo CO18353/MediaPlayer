@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Muzic</title>
+</head>
+<style type="text/css">
+	
+	h1{
+		font-size: 60px;
+		text-align: center;
+		text-decoration: overline;
+		text-shadow: 4px 4px burlywood;
+	}
+
+.select-style {position: relative;
+  	font-family: Arial;
+    border: 1px solid #ccc;
+    width: 120px;
+    border-radius: 3px;
+    overflow: hidden;
+    background: burlywood;}
+
+.select-style select {padding: 5px 8px;
+    width: 130%;
+    border: none;
+    box-shadow: none;
+    background: transparent;
+    background-image: none;
+    -webkit-appearance: none;}
+
+.select-style select:focus {outline: none;}
+
+</style>
+
+<script>
+	var pic=Array("../../Comm skills/superman-desenho-png-2.png","../../Comm skills/finger-wag.jpg","../../Comm skills/thanks.gif","../../Comm skills/stand strong.jpg");
+	function muzic()
+	{
+		document.getElementById("ganna").src=document.getElementById("sg").value;
+	}
+	function img1()
+	{
+		document.getElementById("album").src=pic[0];
+	}
+</script>
+
+<body background="glock.jpg">
+	<h1>Punjabi Muzic</h1>
+	<audio controls="controls" autoplay  id="ganna" onloadeddata="img1()"></audio><br><br>
+<div class="select-style"  style="width:200px;">
+<select id="sg" onchange="muzic()">
+	<option disabled="disabled" selected="selected">Select a song</option>
+    <option value="C:\Users\Tanveer\Music\Shit Talk Karan Aujla.mp3" name="image">1.Shit Talk</option>
+    <option value="file:///C|/Users/Tanveer/Music/Kasooti Degree Sharry Maan.mp3" name="image"> 2.Yaar Jigraa Kasooti Degree</option>
+    <option value="file:///C|/Users/Tanveer/Music/Jatt Di Clip 2 Singga.mp3" name="image">3.Jatt Di Clip 2</option>
+    <option value="C:\Users\Tanveer\Music\So High-Sidhu Moose Wala.mp3"  name="image">4.So High</option>
+</select>
+</div>
+<br>
+<img id="album" height="50" width="50">
+
+</body>
+</html>
